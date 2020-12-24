@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GeometryService.WebApp</name>
+    </assembly>
+    <members>
+        <member name="T:GeometryService.WebApp.Controllers.FigureController">
+            <summary>
+            Controller for figure executing
+            </summary>
+        </member>
+        <member name="M:GeometryService.WebApp.Controllers.FigureController.CreateFigureAsync(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Figure creation
+            </summary>
+            <param name="figure"></param>
+            <returns>Figure id in database</returns>
+            <response code="200"> Successful operation. </response>
+            <response code="400"> Something was wrong by input data. </response>
+        </member>
+        <member name="M:GeometryService.WebApp.Controllers.FigureController.GetFigureSquareAsync(System.String)">
+            <summary>
+            Get figure square
+            </summary>
+            <param name="id"></param>
+            <returns>Figure square</returns>
+            <response code="200"> Successful operation. </response>
+            <response code="400"> Something was wrong by input data. </response>
+            <response code="404"> Figure is not found. </response>
+            <response code="500"> Bad data on server. </response>
+        </member>
+    </members>
+</doc>

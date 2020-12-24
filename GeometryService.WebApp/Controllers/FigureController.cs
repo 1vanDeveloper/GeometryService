@@ -38,17 +38,17 @@ namespace GeometryService.WebApp.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Guid>> CreateFigureAsync([FromBody] JObject figure)
         {
-            if (figure == null)
+            var type = figure[nameof(FigureBase.Type)]?.ToObject<FigureType>();
+            if (type == null)
             {
-                return BadRequest("figure == null");
+                return BadRequest("FigureBase.Type == null");
             }
-
-            var type = figure[nameof(FigureBase.Type)].ToObject<FigureType>();
+            
             FigureBase entity = type switch
             {
                 FigureType.Circle => figure.ToObject<CircleFigure>(),
                 FigureType.Triangle => figure.ToObject<TriangleFigure>(),
-                _ => throw new ArgumentOutOfRangeException(type.ToString())
+                _ => null
             };
             
             if (!(entity?.IsValid() ?? false))
@@ -84,11 +84,6 @@ namespace GeometryService.WebApp.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<double>> GetFigureSquareAsync(string id)
         {
-            if (string.IsNullOrWhiteSpace(id))
-            {
-                return BadRequest("Bad param Id");
-            }
-
             if (!Guid.TryParse(id, out var figureId))
             {
                 return BadRequest("Can't parse Id");

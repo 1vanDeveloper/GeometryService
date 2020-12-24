@@ -12,6 +12,14 @@ namespace GeometryService.Domain
         
         public DbSet<Figure> Figures { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Data Source=.\\figure.db;");
+            }
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);

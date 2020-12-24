@@ -17,11 +17,6 @@ namespace GeometryService.Domain.Models
         /// </summary>
         public double Y { get; set; }
 
-        public override string ToString()
-        {
-            return $"({X}; {Y})";
-        }
-
         /// <summary>
         /// Distance between two points
         /// </summary>

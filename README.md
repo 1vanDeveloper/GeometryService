@@ -1,9 +1,9 @@
 # GeometryService
 
 ## Projects
-1. [GeometryService.Domain](##GeometryService.Domain)
-1. [GeometryService.WebApp](##GeometryService.WebApp)
-1. [GeometryService.WebApp.Tests](##GeometryService.WebApp.Tests)
+1. [GeometryService.Domain](##geometryservicedomain)
+1. [GeometryService.WebApp](##geometryservicewebapp)
+1. [GeometryService.WebApp.Tests](##geometryServicewebapptests)
 
 
 ## GeometryService.Domain

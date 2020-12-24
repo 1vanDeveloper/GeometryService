@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryService.WebApp", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryService.Domain", "GeometryService.Domain\GeometryService.Domain.csproj", "{0EABEDE6-B74B-4684-AFA3-AB3EE723245A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9FA0D7F9-1FF6-4A94-BB48-1CC7DA063C4A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryService.WebApp.Tests", "GeometryService.WebApp.Tests\GeometryService.WebApp.Tests.csproj", "{FB7E850E-055E-4B5C-AC84-A03FC3161552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +30,10 @@ Global
 		{0EABEDE6-B74B-4684-AFA3-AB3EE723245A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EABEDE6-B74B-4684-AFA3-AB3EE723245A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EABEDE6-B74B-4684-AFA3-AB3EE723245A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7E850E-055E-4B5C-AC84-A03FC3161552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7E850E-055E-4B5C-AC84-A03FC3161552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7E850E-055E-4B5C-AC84-A03FC3161552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7E850E-055E-4B5C-AC84-A03FC3161552}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
